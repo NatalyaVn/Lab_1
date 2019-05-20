@@ -1,24 +1,12 @@
 <html>
-    <script>
-        var str = document.getElementById('d'); 
-        var elem = {tag: null, text: null, count: 0};
-        elem.tag = str.textContent.match(/element:(.*)\;/)[1]; 
-        elem.text = str.textContent.match(/text:(.*)\;/)[1]; 
-        elem.count = str.textContent.match(/count:(.*)\;/)[1];
-
-        str.removeChild(str.children[0]);
-
-        for(var i = 0; i < elem.count; i++)
-        {
-            var newel = document.createElement(elem.tag); 
-            newel.innerHTML = elem.text; 
-            str.appendChild(newel);
-        }
-    </script>
+    <head>
+        <title>Lab №1</title>
+        <script src="script.js" defer></script>
+    </head>
     <body>
         <div id='d'>
             <p> element:span;
-            text:Здесь текст!;
+            text:Здесь текст! ;
             count:5;</p>
         </div>
     </body>
